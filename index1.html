@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,28 +6,228 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" href="css/base.css">
-    <script src="js/rem.js"></script>
-    <title>111</title>
+    <script src="js/mobile.js"></script>
+    <title>首页</title>
 </head>
+    <script>
+        
+       !function (e) {
+    function t(a) {
+        if (i[a]) return i[a].exports;
+        var n = i[a] = {exports: {}, id: a, loaded: !1};
+        return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+    }
+
+    var i = {};
+    return t.m = e, t.c = i, t.p = "", t(0)
+}([function (e, t) {
+    "use strict";
+    Object.defineProperty(t, "__esModule", {value: !0});
+    var i = window;
+    t["default"] = i.flex = function (e, t) {
+        var a = e || 100, n = t || 1, r = i.document, o = navigator.userAgent,
+            d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i), l = o.match(/U3\/((\d+|\.){5,})/i),
+            c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+            p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi), s = i.devicePixelRatio || 1;
+        p || d && d[1] > 534 || c || (s = 1);
+        var u = 1 / s, m = r.querySelector('meta[name="viewport"]');
+        m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+    }, e.exports = t["default"]
+}]);
+flex(100, 1);
+    </script>
 <style>
-    body{
+    html,body{
         background: #1f2548;
     }
-    .banner_img{
+    .banner_box{
         width: 100%;
-        height: auto;
+        height: 100%;
     }
     .content_item{
         width: 100%;
         height: .87rem;
-        background:#0b1236;
+        background: #050a2a;
+        border-top: .01rem solid #293163;
+        display: flex;
+        align-items: center;
     }
+    .content_item:nth-child(2n){
+        background: #060c33;
+    }
+    .car{
+        width: .77rem;
+        height: .57rem;
+        margin-left: .2rem;
+        margin-right: .13rem;
+    }
+    .car img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .car_text{
+        width: 4rem;
+        margin-right: .5rem;
+    }
+    .car_text_top,.car_text_bottom{
+        float: left;
+        width: 100%;
+        height: 50%;
+        color: #fff;
+    }
+    .car_text_1{
+        display: block;
+        font-size: 16px;
+        float: left;
+        margin-right: .07rem;
+    }
+    .car_text_2{
+        display: block;
+        box-sizing: border-box;
+        font-size: .12rem;
+        float: left;
+        border: .02rem solid #293163;
+        color: #293163;
+        border-radius: .04rem;
+        padding: 0 .04rem;
+    }
+    .car_text_bottom span{
+        font-size:12px;
+        color: #b0b2ba;
+        margin-right: .1rem;
+    }
+    .car_state{
+        width:1.08rem;
+        text-align: center;
+        background: #2e82ff;
+        float: right;
+        border-radius: .2rem;
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: .18rem;
+
+    }
+    .jiayouzhan{
+        width: .13rem;
+        height: .13rem;
+        margin-right: .07rem;
+    }
+    .car_state span{
+        color:#fff;
+        font-size:14px;
+    }
+    .car_stop{
+        color: #3e3e42;
+        border: .02rem solid  #3e3e42;
+    }
+    .car_state_active{
+        background: #ff5150;
+        background-image:-webkit-linear-gradient(top,#ff5150,#f02d7c);
+        background-image:-o-linear-gradient(top,#ff5150,#f02d7c);
+        background-image:-ms-linear-gradient(top,#ff5150,#f02d7c);
+        background-image:linear-gradient(top,#ff5150,#f02d7c);
+        background-repeat: repeat-x;
+    }
+    .bottom_btn{
+        width: 100%;
+        padding:.1rem 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        border-top:.01rem solid #293163;
+        background: #060c33;
+        opacity:0.9;
+    }
+    .btn_item{
+        display: block;
+        width: 33.333%;
+        height: 100%;
+        float: left;
+        box-sizing: border-box;
+
+    }
+    .btn_item img{
+        display: block;
+        width:.21rem;
+        height: .15rem;
+        margin: 0 auto;
+    }
+    .btn_item p{
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #1587f4;
+    }
+
+
+
 </style>
 <body>
-<img src="image/banner.jpg" alt="" class="banner_img">
+<a href="">
+    <img src="image/banner.jpg" alt="" class="banner_box">
+</a>
+<div class="content-box">
+    <div class="content_item">
+        <div class="car">
+            <img src="image/car.png" alt="">
+        </div>
+        <div class="car_text">
+            <div class="car_text_top">
+                <p class="car_text_1">京A48***</p>
+                <p class="car_text_2">刚出车</p>
+            </div>
+            <div class="car_text_bottom" style="margin-top:.15rem">
+                <span>入驻平台5天</span>
+                <span>今日接单4单</span>
+            </div>
+        </div>
+        <div class="car_state">
+            <img src="image/jiayouzhan.png" alt="" class="jiayouzhan">
+            <span>20/200</span>
+        </div>
+    </div>
 
-<div class="content_item">
+    <div class="content_item">
+        <div class="car">
+            <img src="image/car.png" alt="">
+        </div>
+        <div class="car_text">
+            <div class="car_text_top">
+                <p class="car_text_1">京A48***</p>
+                <p class="car_text_2 car_stop">已经停止工作</p>
+            </div>
+            <div class="car_text_bottom">
+                <span>入驻平台5天</span>
+                <span>今日接单4单</span>
+            </div>
+        </div>
 
+        <div class="car_state car_state_active">
+            <img src="image/jiayouzhan.png" alt="" class="jiayouzhan">
+            <span>200/200</span>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div style="width: 100%;height:1rem"></div>
+<div class="bottom_btn">
+    <a href="index.html" class="btn_item">
+        <img src="image/index.png" alt="" style="margin-bottom: .1rem">
+        <p>首页</p>
+    </a>
+    <a href="history.html" class="btn_item">
+        <img src="image/jingxing.png" alt="" style="width:.4rem;height:.4rem">
+        <p style="color: #a2a2a5">进行</p>
+    </a>
+    <a href="" class="btn_item">
+        <img src="image/my.png" alt="" style="width:.4rem;height:.4rem">
+        <p style="color: #a2a2a5">我的</p>
+    </a>
 </div>
 
 </body>
