@@ -6,29 +6,237 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" href="css/base.css">
-    <script src="js/rem.js"></script>
-    <title>111</title>
-</head>
-<style>
-    body{
-        background: #1f2548;
-    }
-    .banner_img{
-        width: 100%;
-        height: auto;
-    }
-    .content_item{
-        width: 100%;
-        height: .87rem;
-        background:#0b1236;
-    }
-</style>
-<body>
-<img src="image/banner.jpg" alt="" class="banner_img">
+    <script src="js/mobile.js"></script>
+    <title>首页</title>
+    <script>
+        !function (e) {
+            function t(a) {
+                if (i[a]) return i[a].exports;
+                var n = i[a] = {exports: {}, id: a, loaded: !1};
+                return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+            }
 
-<div class="content_item">
+            var i = {};
+            return t.m = e, t.c = i, t.p = "", t(0)
+        }([function (e, t) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {value: !0});
+            var i = window;
+            t["default"] = i.flex = function (e, t) {
+                var a = e || 100, n = t || 1, r = i.document, o = navigator.userAgent,
+                    d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i), l = o.match(/U3\/((\d+|\.){5,})/i),
+                    c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+                    p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi), s = i.devicePixelRatio || 1;
+                p || d && d[1] > 534 || c || (s = 1);
+                var u = 1 / s, m = r.querySelector('meta[name="viewport"]');
+                m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+            }, e.exports = t["default"]
+        }]);
+        flex(100, 1);
+    </script>
+    <style>
+
+        body{
+            background: #1f2548;
+
+        }
+        .banner_box{
+            width: 100%;
+            height: 100%;
+        }
+        .content_item{
+            width: 100%;
+            height: 1.72rem;
+            background: #050a2a;
+            border-top: .02rem solid #293163;
+            display: flex;
+            align-items: center;
+        }
+        .content_item:nth-child(2n){
+            background: #060c33;
+        }
+        .car{
+            width: 1.52rem;
+            height: 1.12rem;
+            margin-left: .4rem;
+            margin-right: .24rem;
+        }
+        .car img{
+            width: 100%;
+            height: 100%;
+        }
+        .car_text{
+            margin-right: 1rem;
+
+        }
+        .car_text_top,.car_text_bottom{
+            float: left;
+            width: 100%;
+            height: 50%;
+            color: #fff;
+        }
+        .car_text_1{
+            display: block;
+            font-size: .32rem;
+            float: left;
+            margin-right: .14rem;
+        }
+        .car_text_2{
+            display: block;
+            box-sizing: border-box;
+            font-size: .24rem;
+            float: left;
+            border: .02rem solid #293163;
+            color: #293163;
+            border-radius: .04rem;
+            text-align: center;
+            padding: 0 .04rem;
+        }
+        .car_text_bottom span{
+            font-size:.24rem;
+            color: #b0b2ba;
+            margin-right: .1rem;
+        }
+        .car_text_bottom{
+            margin-top: .24rem;
+        }
+        .car_state{
+            width:2.16rem;
+            height: .52rem;
+            text-align: center;
+            background: #2e82ff;
+            position: absolute;
+            right: 0;
+            float: right;
+            border-radius: .2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: .18rem;
+        }
+        .jiayouzhan{
+            width: .26rem;
+            height: .26rem;
+            margin-right: .07rem;
+        }
+        .car_state span{
+            color:#fff;
+            font-size:.24rem;
+        }
+        .car_stop{
+            color: #3e3e42;
+            border: .02rem solid  #3e3e42;
+        }
+        .car_state_active{
+            background: #ff5150;
+            background-image:-webkit-linear-gradient(top,#ff5150,#f02d7c);
+            background-image:-o-linear-gradient(top,#ff5150,#f02d7c);
+            background-image:-ms-linear-gradient(top,#ff5150,#f02d7c);
+            background-image:linear-gradient(top,#ff5150,#f02d7c);
+            background-repeat: repeat-x;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<!--banner-->
+<a href="">
+    <img src="image/banner.jpg" alt="" class="banner_box">
+</a>
+<!--</div>-->
+<!--banner-end-->
+<!--内容-->
+<div class="content_box">
+
+    <div class="content_item">
+        <div class="car">
+            <img src="image/car.png" alt="">
+        </div>
+        <div class="car_text">
+            <div class="car_text_top">
+                <p class="car_text_1">京A48***</p>
+                <p class="car_text_2">刚出车</p>
+            </div>
+            <div class="car_text_bottom">
+                <span>入驻平台5天</span>
+                <span>今日接单4单</span>
+            </div>
+        </div>
+        <div class="car_state">
+            <img src="image/jiayouzhan.png" alt="" class="jiayouzhan">
+            <span>20/200</span>
+        </div>
+    </div>
+
+    <div class="content_item">
+        <div class="car">
+            <img src="image/car.png" alt="">
+        </div>
+        <div class="car_text">
+            <div class="car_text_top">
+                <p class="car_text_1">京A48***</p>
+                <p class="car_text_2 car_stop">已经停止工作</p>
+            </div>
+            <div class="car_text_bottom">
+                <span>入驻平台5天</span>
+                <span>今日接单4单</span>
+            </div>
+        </div>
+        <div class="car_state car_state_active">
+            <img src="image/jiayouzhan.png" alt="" class="jiayouzhan">
+            <span>20/200</span>
+        </div>
+    </div>
+
+    <div class="content_item">
+        <div class="car">
+            <img src="image/car.png" alt="">
+        </div>
+        <div class="car_text">
+            <div class="car_text_top">
+                <p class="car_text_1">京A48***</p>
+                <p class="car_text_2 car_stop">已停运</p>
+            </div>
+            <div class="car_text_bottom">
+                <span>入驻平台5天</span>
+                <span>今日接单4单</span>
+            </div>
+        </div>
+        <div class="car_state car_state_active">
+            <img src="image/jiayouzhan.png" alt="" class="jiayouzhan">
+            <span>20/200</span>
+        </div>
+    </div>
+
+    <div class="content_item">
+        <div class="car">
+            <img src="image/car.png" alt="">
+        </div>
+        <div class="car_text">
+            <div class="car_text_top">
+                <p class="car_text_1">京A48***</p>
+                <p class="car_text_2 car_stop">已工作3小时</p>
+            </div>
+            <div class="car_text_bottom">
+                <span>入驻平台5天</span>
+                <span>今日接单4单</span>
+            </div>
+        </div>
+        <div class="car_state car_state_active">
+            <img src="image/jiayouzhan.png" alt="" class="jiayouzhan">
+            <span>20/200</span>
+        </div>
+    </div>
+
 
 </div>
+
+<!--底部按钮-->
+
+
+
 
 </body>
 </html>
