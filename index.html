@@ -19,11 +19,7 @@
         .content_item{
             width: 100%;
             height: 1.29rem;
-<<<<<<< HEAD
             /*padding: .15rem 0;*/
-=======
-            padding: .15rem 0;
->>>>>>> 135a78da34544f380897c33a53ec622ebfefdea1
             background: #050a2a;
             border-top: .01rem solid #293163;
             display: flex;
@@ -143,7 +139,6 @@
 
         /*登陆*/
         .login_box{
-<<<<<<< HEAD
             width: 6rem;
             height:8rem;
             background: #1e2447;
@@ -421,13 +416,19 @@
             width: 100%;
             height: 100%;
         }
-        .xin_clone{
-            width: .41rem;
-            height: .41rem;
+
+        .xin_clone_box{
+            width: .8rem;
+            height: .8rem;
             position: fixed;
             bottom: 3.12rem;
             left: 0;
             right: 0;
+            margin: 0 auto;
+        }
+        .xin_clone{
+            width: .41rem;
+            height: .41rem;
             margin: 0 auto;
         }
         .xin_clone img{
@@ -436,17 +437,6 @@
         }
 
 
-=======
-            width: 4.03rem;
-            height: 5.37rem;
-            background: #1e2447;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            bottom: 1.79rem;
-        }
->>>>>>> 135a78da34544f380897c33a53ec622ebfefdea1
     </style>
 </head>
 <body>
@@ -678,101 +668,95 @@
 </div>
 
 <!--登陆-->
-<div class="zhezhao">
-    <div class="login_box">
-        <div class="logo_box">
-            <img src="image/logo.png" alt="">
-        </div>
-        <div class="name">
-            <p>登陆嗡嗡加油</p>
-        </div>
-        <!--输入-->
-        <form action="">
-            <!--手机号-->
-            <div class="tel">
-                <div class="tel_ico">
-                    <img src="image/shouji.png" alt="">
-                </div>
-                <input type="tel" placeholder="手机号">
-            </div>
-            <!--验证码-->
-            <div class="yanzhen">
-                <div class="yanzhengma">
-                    <img src="image/yanzhengma.png" alt="">
-                </div>
-                <input type="tel" placeholder="输入验证码">
-                <div class="yanzhen_btn">发送验证码</div>
-            </div>
-            <!--邀请码-->
-            <div class="yaoqing">
-                <div class="yaoqingma">
-                    <img src="image/yaoqingma.png" alt="">
-                </div>
-                <input type="tel" placeholder="填写邀请码有奖励哦～">
-            </div>
-            <button id="submit" value="登陆">登 陆</button>
-        </form>
+<div class="zhezhao"></div>
+<div class="login_box">
+    <div class="logo_box">
+        <img src="image/logo.png" alt="">
     </div>
+    <div class="name">
+        <p>登陆嗡嗡加油</p>
+    </div>
+    <!--输入-->
+    <form action="">
+        <!--手机号-->
+        <div class="tel">
+            <div class="tel_ico">
+                <img src="image/shouji.png" alt="">
+            </div>
+            <input type="tel" placeholder="手机号">
+        </div>
+        <!--验证码-->
+        <div class="yanzhen">
+            <div class="yanzhengma">
+                <img src="image/yanzhengma.png" alt="">
+            </div>
+            <input type="tel" placeholder="输入验证码">
+            <div class="yanzhen_btn">发送验证码</div>
+        </div>
+        <!--邀请码-->
+        <div class="yaoqing">
+            <div class="yaoqingma">
+                <img src="image/yaoqingma.png" alt="">
+            </div>
+            <input type="tel" placeholder="填写邀请码有奖励哦～">
+        </div>
+        <button id="submit" value="登陆">登 陆</button>
+    </form>
 </div>
-
 <!--加油-->
-<div class="zhezhao_jia">
-    <div class="jiayou">
-        <!--logo-->
-        <div class="jiayou_logo">
-            <img src="image/jiayou_logo.png" alt="">
-        </div>
-        <!--车牌-->
-        <div class="jiayou_name">
-            <p>为京E65***加油</p>
-        </div>
-        <!--金额-->
-        <div class="money">
-                <div class="money_ico">
-                    <img src="image/money.png" alt="">
-                </div>
-                <input type="text" placeholder="请输入金额" onkeyup="dataBander()">
-        </div>
-        <!--抵扣-->
-        <p class="dikou">加油券已抵扣10元</p>
-        <!--支付-->
-        <div class="pay">
-            <!--微信-->
-            <div class="pay_wx  pay_active">
-                <div class="wx_ico">
-                    <img src="image/weixin.png" alt="">
-                </div>
-                <span>微信支付</span>
-            </div>
-            <!--钱包-->
-            <div class="pay_qb">
-                <div class="qb_ico">
-                    <img src="image/qianbao.png" alt="">
-                </div>
-                <span>微信支付</span>
-            </div>
-        </div>
-        <!--按钮-->
-        <button id="pay" value="登陆">支付</button>
-        <div class="jiayou_clone">
-            <img src="image/cuo.png" alt="">
-        </div>
-
+<div class="jiayou">
+    <!--logo-->
+    <div class="jiayou_logo">
+        <img src="image/jiayou_logo.png" alt="">
     </div>
-</div>
-
-<!--新用户-->
-<div class="zhezhao_xin">
-    <a href="" class="xin-box">
-        <img src="image/xinyonghu.png" alt="">
-    </a>
-    <div class="xin_clone">
+    <!--车牌-->
+    <div class="jiayou_name">
+        <p>为京E65***加油</p>
+    </div>
+    <!--金额-->
+    <div class="money">
+        <div class="money_ico">
+            <img src="image/money.png" alt="">
+        </div>
+        <input type="text" placeholder="请输入金额" onkeyup="dataBander()">
+    </div>
+    <!--抵扣-->
+    <p class="dikou">加油券已抵扣10元</p>
+    <!--支付-->
+    <div class="pay">
+        <!--微信-->
+        <div class="pay_wx  pay_active">
+            <div class="wx_ico">
+                <img src="image/weixin.png" alt="">
+            </div>
+            <span>微信支付</span>
+        </div>
+        <!--钱包-->
+        <div class="pay_qb">
+            <div class="qb_ico">
+                <img src="image/qianbao.png" alt="">
+            </div>
+            <span>微信支付</span>
+        </div>
+    </div>
+    <!--按钮-->
+    <button id="pay" value="登陆">支付</button>
+    <div class="jiayou_clone">
         <img src="image/cuo.png" alt="">
     </div>
 
 </div>
-
-
+<!--新用户-->
+<div class="zhezhao_xin">
+    <a href="www.baidu.com" class="xin-box">
+        <img src="image/xinyonghu.png" alt="">
+    </a>
+    <div class="xin_clone_box">
+        <div class="xin_clone">
+            <img src="image/cuo.png" alt="">
+        </div>
+    </div>
+</div>
 
 </body>
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -780,14 +764,20 @@
 <script>
     //登陆
     
-    $(".zhezhao,.zhezhao_jia").click(function () {
+    $(".zhezhao,.zhezhao_xin,.xin_clone").click(function () {
         $('.login_box').css('display','none');
         $(".zhezhao").css('display','none');
+        $(".zhezhao_xin").css('display','none')
     });
     //加油
-    $('.zhezhao_jia').hide();
 
-    $('.zhezhao_xin').hide();
+    $('.login_box').hide();
+    $('.jiayou').hide();
+
+    $('.zhezhao').hide();
+
+    // $('.zhezhao_xin').hide();
+
 
     $('.car_state').click(function () {
         $('.zhezhao_jia').show();
