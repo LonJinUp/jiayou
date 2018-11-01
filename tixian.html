@@ -102,13 +102,19 @@
 <div class="chenggong">
     <img src="image/chenggong.png" alt="">
 </div>
-<p class="cg-text">您已成功提现10元</p>
+<p class="cg-text"></p>
 <a href="javascript:history.back(-1)" class="ok_btn">确 定</a>
 
 
 
 </body>
 <script src="js/jquery-3.1.1.min.js"></script>
+<script src="http://code.changer.hk/jquery/plugins/jquery.cookie.js"></script>
+
+<script>
+    var doctorId = $.cookie('money');
+    $(".cg-text").html("您已成功提现"+doctorId+"元")
+</script>
 
 
 </html>

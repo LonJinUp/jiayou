@@ -7,7 +7,7 @@
     <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" href="css/base.css">
     <script src="js/rem.js"></script>
-    <title>规则</title>
+    <title>钱包提现</title>
     <style>
         body{
             background: #1f2548;
@@ -140,7 +140,7 @@
 <p class="ketixian">可提现余额</p>
 <div class="tx-number">
     <span style="font-size:.36rem">¥</span>
-    <span style="font-size:.54rem">1200</span>
+    <span style="font-size:.54rem">122</span>
     <span style="font-size:.54rem">元</span>
 </div>
 <div class="tx-input">
@@ -151,12 +151,39 @@
 
 
 
-<a href="javascript:history.back(-1)" class="ok_btn">提现到绑定微信</a>
+<div href="" class="ok_btn">提现到绑定微信</div>
 
 
 
 </body>
 <script src="js/jquery-3.1.1.min.js"></script>
+<script src="http://code.changer.hk/jquery/plugins/jquery.cookie.js"></script>
+<script>
+   //点击全部提现
+   var money=$('.tx-number :nth-child(2)').html();
+    $('.quanbu-btn').click(function () {
+        if (money>0){
+            $('.tx-input input').val(money)
+        }else{
+            alert("提现金额不能为0")
+        }
+    });
+    //点击提现到绑定微信
+    $('.ok_btn').click(function () {
+        var tixian=$('.tx-input input').val();
+       
+        console.log(typeof(money))
+        ;
+        if (tixian<money){
+            $.cookie('money', tixian);
+            window.location.href = "tixian.html";
+
+        }else {
+            alert("提现金额不能大于钱包金额！")
+        }
+    });
 
 
+
+</script>
 </html>

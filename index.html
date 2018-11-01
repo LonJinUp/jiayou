@@ -657,11 +657,11 @@
         <img src="image/index.png" alt="" style="margin-top:.21rem;margin-bottom: .14rem">
         <p>首页</p>
     </a>
-    <a href="history.html" class="btn_item">
+    <a href="jinxing.html" class="btn_item">
         <img src="image/jingxing.png" alt="" style="width:.32rem;height:.32rem;margin-top: .15rem;margin-bottom: .11rem">
         <p style="color: #a2a2a5">进行</p>
     </a>
-    <a href="" class="btn_item">
+    <a href="my.html" class="btn_item">
         <img src="image/my.png" alt="" style="width:.32rem;height:.32rem;margin-top: .15rem;margin-bottom: .11rem">
         <p style="color: #a2a2a5">我的</p>
     </a>
@@ -748,7 +748,7 @@
 </div>
 <!--新用户-->
 <div class="zhezhao_xin">
-    <a href="www.baidu.com" class="xin-box">
+    <a href="https://www.baidu.com" class="xin-box">
         <img src="image/xinyonghu.png" alt="">
     </a>
     <div class="xin_clone_box">
@@ -764,10 +764,12 @@
 <script>
     //登陆
     
-    $(".zhezhao,.zhezhao_xin,.xin_clone").click(function () {
+    $(".zhezhao,.xin_clone,.jiayou_clone").click(function () {
         $('.login_box').css('display','none');
         $(".zhezhao").css('display','none');
-        $(".zhezhao_xin").css('display','none')
+        $(".zhezhao_xin").css('display','none');
+        $('.jiayou').hide();
+
     });
     //加油
 
@@ -776,11 +778,10 @@
 
     $('.zhezhao').hide();
 
-    // $('.zhezhao_xin').hide();
-
 
     $('.car_state').click(function () {
-        $('.zhezhao_jia').show();
+        $('.zhezhao').show();
+        $('.jiayou').show();
     });
     //支付数据双向绑定
     function dataBander(){
