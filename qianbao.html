@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/rem.js"></script>
+    <title>规则</title>
+    <style>
+        body{
+            background: #1f2548;
+        }
+        .top_bar{
+            width: 100%;
+            height: .86rem;
+            background:#060c33;
+            position: relative;
+            border-bottom: .02rem solid #343958;
+        }
+        .top_bar p{
+            display: block;
+            color: #fff;
+            font-size: .34rem;
+            text-align: center;
+            line-height: .86rem;
+        }
+        .return_btn{
+            display: block;
+            width: .22rem;
+            height: .38rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: .3rem;
+            margin: auto 0;
+        }
+        .return_btn img{
+            width: 100%;
+            height: 100%;
+        }
+        .fenxiang{
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: .3rem;
+            margin: auto 0;
+        }
+        .fenxiang p{
+            font-size:.24rem;
+            color: #93969c;
+        }
+
+        .ok_btn{
+            display: block;
+            width: 6.60rem;
+            height: .8rem;
+            margin: 0 auto;
+            margin-top: .5rem;
+            border-radius: .34rem;
+            color: #fff;
+            background: #2a7fff;
+            text-align: center;
+            line-height: .8rem;
+        }
+
+        .ketixian{
+            margin-top: 1.2rem;
+            font-size: .24rem;
+            color: rgba(255,255,255,0.2);
+            text-align: center;
+        }
+        .tx-number{
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+        }
+        .tx-input{
+            width: 6.60rem;
+            height: .8rem;
+            margin: 0 auto;
+            margin-top: 1.4rem;
+            border-radius: .34rem;
+            color: #fff;
+            border: .02rem solid ;
+            text-align: center;
+            line-height: .8rem;
+            box-sizing: border-box;
+            border:.02rem solid #5f6cbe;
+            display: flex;
+            align-items: center;
+        }
+        .qian-ico{
+            display: block;
+            width: .32rem;
+            height:.32rem;
+            margin-left:.3rem;
+            margin-right: .12rem;
+        }
+        .tx-input input{
+            width: 80%;
+            height: 70%;
+            background: none;
+            border: none;
+            font-size: .24rem;
+            color: rgba(255,255,255,0.8);
+        }
+        input:focus{
+            border: none;
+        }
+        input:focus{outline:none;}
+        .quanbu-btn{
+            width: 1.2rem;
+            height: .4rem;
+            padding: 0 .15rem;
+            border-radius: .05rem;
+            text-align: center;
+            line-height: .4rem;
+            position: absolute;
+            right: .38rem;
+            font-size: .18rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<!--顶部-->
+<div class="top_bar">
+    <p>钱包余额</p>
+    <a href="javascript:history.back(-1)" class="return_btn">
+        <img src="image/green-arrows.png" alt="">
+    </a>
+    <a href="" class="fenxiang">
+        <p>收支明细</p>
+    </a>
+</div>
+<div style="height: .86rem"></div>
+<p class="ketixian">可提现余额</p>
+<div class="tx-number">
+    <span style="font-size:.36rem">¥</span>
+    <span style="font-size:.54rem">1200</span>
+    <span style="font-size:.54rem">元</span>
+</div>
+<div class="tx-input">
+    <img src="image/qian.png" alt="" class="qian-ico">
+    <input type="text" placeholder="输入金额">
+    <div class="quanbu-btn">全部提现</div>
+</div>
+
+
+
+<a href="javascript:history.back(-1)" class="ok_btn">提现到绑定微信</a>
+
+
+
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+
+
+</html>

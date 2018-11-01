@@ -7,7 +7,7 @@
     <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" href="css/base.css">
     <script src="js/rem.js"></script>
-    <title>历史记录</title>
+    <title>进行中</title>
     <style>
         body{
             background: #1f2548;
@@ -15,8 +15,8 @@
 
         .content_item{
             width: 100%;
-            height: .87rem;
-            padding: .15rem 0;
+            height: 1.29rem;
+            /* padding: .15rem 0; */
             background: #050a2a;
             border-top: .01rem solid #293163;
             display: flex;
@@ -26,10 +26,10 @@
             background: #060c33;
         }
         .car{
-            width: .77rem;
-            height: .57rem;
-            margin-left: .2rem;
-            margin-right: .13rem;
+            width: 1.13rem;
+            height: .84rem;
+            margin-left: .3rem;
+            margin-right: .2rem;
 
         }
         .car img{
@@ -37,9 +37,10 @@
             height: 100%;
         }
 
+
         .bottom_btn{
             width: 100%;
-            padding:.1rem 0;
+            height: .89rem;
             position: fixed;
             bottom: 0;
             left: 0;
@@ -57,19 +58,21 @@
         }
         .btn_item img{
             display: block;
-            width:.4rem;
-            height: .3rem;
+            width:.33rem;
+            height: .21rem;
             margin: 0 auto;
         }
         .btn_item p{
-            font-size: 14px;
+            font-size:.20rem;
             display: block;
             width: 100%;
             text-align: center;
             color: #1587f4;
         }
+
+
         .car_text{
-            width: 5rem;
+            width: 4rem;
         }
         .car_text_top,.car_text_bottom{
             float: left;
@@ -77,16 +80,19 @@
             height: 50%;
             color: #fff;
         }
+        .car_text_bottom{
+            margin-top: .1rem;
+        }
         .car_text_1{
             display: block;
-            font-size:16px;
+            font-size:.24rem;
             float: left;
-            margin-right: .07rem;
+            margin-right: .1rem;
         }
         .car_text_2{
             display: block;
             box-sizing: border-box;
-            font-size: .24rem;
+            font-size: .14rem;
             float: left;
             border: .02rem solid #293163;
             color: #293163;
@@ -94,16 +100,17 @@
             padding: 0 .04rem;
         }
         .car_text_bottom span{
-            font-size:12px;
+            font-size:.18rem;
             color: #b0b2ba;
             margin-right: .1rem;
         }
         .car_state{
-            width:1.7rem;
+            width:1.6rem;
+            height: .39rem;
             text-align: center;
             background: #505469;
             float: right;
-            border-radius: .2rem;
+            border-radius:.2rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -111,67 +118,74 @@
 
         }
         .jiayouzhan{
-            width: .2rem;
+            width: .18rem;
             height: .2rem;
-            margin-right: .07rem;
+            margin-right: .12rem;
         }
         .car_state span{
             color:#050a29;
-            font-size:14px;
+            font-size:.18rem;
         }
-        .top_box{
-            width: 100%;
-            height: 1rem;
-            float: left;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .top_box p{
-            width:2.6rem;
-            height: .6rem;
-            text-align: center;
-            font-size: 20px;
-            color: #ffffff;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
+        .car_stop{
+            color: #3e3e42;
+            border: .02rem solid  #3e3e42;
         }
 
-        .return_btn{
-            display: block;
-            float: left;
-            width:.3rem;
-            height: .4rem;
-            margin-left:.2rem;
-        }
-        .return_btn img{
+
+
+
+        .top_bar{
             width: 100%;
-            height: 100%;
+            height: .86rem;
+            background:#060c33;
+            position: fixed;
+            border-bottom: .02rem solid #343958;
         }
+        .top_bar p{
+            display: block;
+            color: #fff;
+            font-size: .34rem;
+            text-align: center;
+            line-height: .8rem;
+        }
+
         .prompt{
             width: 100%;
             height: auto;
             text-align: center;
             padding-top:.32rem;
             border-top:.01rem solid #293163;
-            font-size: 16px;
+            font-size: .32rem;
             color: #474a5e;
         }
+        .return_btn{
+            display: block;
+            width: .22rem;
+            height: .38rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: .3rem;
+            margin: auto 0;
+        }
+        .return_btn img{
+            width: 100%;
+            height: 100%;
+        }
+
     </style>
 </head>
 <body>
-<div class="top_box">
+<div class="top_bar">
     <a href="javascript:history.back(-1)" class="return_btn">
         <img src="image/green-arrows.png" alt="">
     </a>
-    <p>历史记录</p>
+    <p>进行中</p>
 </div>
+<div style="width: 100%;height: .86rem"></div>
 <!--内容-->
 <div class="content_box">
+
     <div class="content_item">
         <div class="car">
             <img src="image/car.png" alt="">
@@ -179,35 +193,39 @@
         <div class="car_text">
             <div class="car_text_top">
                 <p class="car_text_1">京A48***</p>
-                <p class="car_text_2 car_stop">已经停止工作</p>
+                <p class="car_text_2">刚出车</p>
             </div>
             <div class="car_text_bottom">
                 <span>入驻平台5天</span>
-                <span>今日接单4单</span>
+                <span style="margin-right:0">获得收益</span>
+                <span style="color:#bc295d;margin-right:0">200元</span>
             </div>
         </div>
-
         <div class="car_state car_state_active">
-            <img src="image/jiayouzhan.png" alt="" class="jiayouzhan">
-            <span>200/200</span>
+            <img src="image/jiayou_black.png" alt="" class="jiayouzhan">
+            <span>20/200</span>
         </div>
     </div>
+
     <div class="prompt">没有更多数据啦</div>
 
 </div>
 <!--底部按钮-->
-<div style="width: 100%;height:1rem"></div>
+<div style="width: 100%;height:.9rem"></div>
 <div class="bottom_btn">
+
     <a href="index.html" class="btn_item">
-        <img src="image/car_white.png" alt="" style="margin-bottom:.1rem">
+        <img src="image/car_white.png" alt="" style="margin-top:.21rem;margin-bottom: .14rem">
         <p style="color: #a2a2a5">首页</p>
     </a>
-    <a href="" class="btn_item">
-        <img src="image/jinxingzhong_active.png" alt="" style="width:.4rem;height:.4rem">
+
+    <a href="history.html" class="btn_item">
+        <img src="image/jinxingzhong_active.png" alt="" style="width:.32rem;height:.32rem;margin-top: .15rem;margin-bottom: .11rem">
         <p>进行</p>
     </a>
+
     <a href="" class="btn_item">
-        <img src="image/my.png" alt="" style="width:.4rem;height:.4rem">
+        <img src="image/my.png" alt="" style="width:.32rem;height:.32rem;margin-top: .15rem;margin-bottom: .11rem">
         <p style="color: #a2a2a5">我的</p>
     </a>
 </div>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/rem.js"></script>
+    <title>我的嗡嗡</title>
+    <style>
+        body{
+            background: #1f2548;
+        }
+        .bottom_btn{
+            width: 100%;
+            height: .89rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            border-top:.01rem solid #293163;
+            background: #060c33;
+            opacity:0.9;
+        }
+        .btn_item{
+            display: block;
+            width: 33.333%;
+            height: 100%;
+            float: left;
+            box-sizing: border-box;
+
+        }
+        .btn_item img{
+            display: block;
+            width:.33rem;
+            height: .21rem;
+            margin: 0 auto;
+        }
+        .btn_item p{
+            font-size:.20rem;
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: #1587f4;
+        }
+        .banner_my{
+            width:100%;
+            height: 2.35rem;
+            background:url("image/banner_my.png")no-repeat center center/100% 100%;
+            position: relative;
+        }
+        .banner_my-zhe{
+            width: 100%;
+            height: 2.35rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background:rgba(6,12,51,0.5);
+        }
+        .my-box{
+            width: 100%;
+            height: 2.8rem;
+            background: #060c33;
+            position:relative;
+            margin-bottom: .16rem;
+        }
+        .my-img{
+            width: 1.36rem;
+            height: 1.36rem;
+            position: absolute;
+            top: -0.25rem;
+            left: 0.3rem;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: .02rem solid #5d69ba;
+        }
+        .my-content{
+            margin-left: 1.86rem;
+            width: 2rem;
+            height: 60%;
+            box-sizing: border-box;
+            padding-top: .2rem;
+            float: left;
+        }
+        .my-content p{
+            font-size: .28rem;
+            color: #fff;
+        }
+        .my-tel{
+            display: block;
+            float: left;
+            width: .14rem;
+            height: .2rem;
+            margin-right: .15rem;
+        }
+        .my-ed{
+            padding: .1rem .15rem;
+            margin-top: .25rem;
+            float: right;
+            margin-right:.3rem;
+            border-radius: .04rem;
+            background: #2b3151;
+            text-align: center;
+            line-height: .38rem;
+            color: rgba(255,255,255,0.4);
+            font-size: .18rem;
+        }
+        .my-ka{
+            display: block;
+            width: 100%;
+            background: #060c33;
+            margin-bottom:.02rem;
+            box-sizing: border-box;
+            padding: .34rem .3rem;
+        }
+        .my-ka span{
+            font-size: .24rem;
+            color: #fff;
+        }
+        .jt-right{
+            width: .18rem;
+            height: .32rem;
+            margin-left: .2rem;
+            float: right;
+        }
+        div img{
+            width: 100%;
+            height: 100%;
+        }
+        .my-ka p{
+            float: right;
+            color: #888994;
+            font-size: .22rem;
+        }
+
+        .yaoqingma{
+            margin-top:.98rem;
+            font-size:.58rem;
+            color: rgba(255,255,255,0.2);
+            text-align: center;
+            font-weight: bold;
+        }
+        .my-yqm{
+            margin-top:.22rem;
+            font-size:.24rem;
+            color: rgba(255,255,255,0.2);
+            text-align: center;
+            margin-bottom: 1.08rem;
+        }
+        .my-money{
+            width: 100%;
+            height: .66rem;
+            float: left;
+            box-sizing: border-box;
+            /*padding-right:.3rem;*/
+            /*padding-left:.3rem;*/
+        }
+        .money-item{
+            width:33%;
+            float: left;
+            height: 100%;
+            box-sizing: border-box;
+            padding-left: .3rem;
+        }
+        .money-item1{
+            width: 34%;
+            float: left;
+            border-left:.02rem solid #1f2548;
+            border-right:.02rem solid #1f2548;
+        }
+        .money-item p{
+            font-size:.18rem;
+            color: #fff;
+        }
+        .money-item span{
+            font-size:.22rem;
+            color: #fff;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="banner_my">
+    <div class="banner_my-zhe"></div>
+</div>
+
+<div class="my-box">
+    <!--头像-->
+    <div class="my-img"></div>
+    <!---->
+    <div class="my-content">
+        <p>嗡嗡237645</p>
+        <p style="margin-top: .2rem;display: flex;align-items: center">
+            <img src="image/shouji.png" alt="" class="my-tel">
+            <span style="font-size: .16rem">18723546788</span>
+        </p>
+    </div>
+    <div class="my-ed">加油额度 200</div>
+
+    <div class="my-money">
+        <div class="money-item">
+            <p>钱包余额 (元)</p>
+            <span>300元</span>
+        </div>
+        <div class="money-item money-item1">
+            <p>进行中 (元)</p>
+            <span>300元</span>
+        </div>
+        <div class="money-item">
+            <p>推广收益 (元)</p>
+            <span>300元</span>
+        </div>
+    </div>
+</div>
+
+<a class="my-ka">
+    <span>我的卡券</span>
+    <div style="float: right;display: flex;align-items: center">
+        <p>2张</p>
+        <div class="jt-right">
+            <img src="image/green-arrows2.png" alt="">
+        </div>
+    </div>
+</a>
+
+<a class="my-ka">
+    <span>我的邀请</span>
+    <div style="float: right;display: flex;align-items: center">
+        <p>2张</p>
+        <div class="jt-right">
+            <img src="image/green-arrows2.png" alt="">
+        </div>
+    </div>
+</a>
+
+
+<a class="my-ka">
+    <span>投诉建议</span>
+    <div style="float: right;display: flex;align-items: center">
+        <!--<p>2张</p>-->
+        <div class="jt-right">
+            <img src="image/green-arrows2.png" alt="">
+        </div>
+    </div>
+</a>
+
+<a class="my-ka" style="margin-top:.12rem">
+    <span>设置</span>
+    <div style="float: right;display: flex;align-items: center">
+        <!--<p>2张</p>-->
+        <div class="jt-right">
+            <img src="image/green-arrows2.png" alt="">
+        </div>
+    </div>
+</a>
+
+<p class="yaoqingma">123567</p>
+<p class="my-yqm">我的邀请码</p>
+
+<!--底部按钮-->
+<div style="width: 100%;height:.9rem"></div>
+<div class="bottom_btn">
+    <a href="index.html" class="btn_item">
+        <img src="image/car_white.png" alt="" style="margin-top:.21rem;margin-bottom: .14rem">
+        <p style="color: #a2a2a5">首页</p>
+    </a>
+    <a href="history.html" class="btn_item">
+        <img src="image/jingxing.png" alt="" style="width:.32rem;height:.32rem;margin-top: .15rem;margin-bottom: .11rem">
+        <p style="color: #a2a2a5">进行</p>
+    </a>
+    <a href="" class="btn_item">
+        <img src="image/my_white.png" alt="" style="width:.32rem;height:.32rem;margin-top: .15rem;margin-bottom: .11rem">
+        <p>我的</p>
+    </a>
+</div>
+
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+
+
+</html>
