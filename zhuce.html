@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话号码,email识别 -->
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app"> 
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="stylesheet" href="/static/web/css/base.css">
+    <script src="/static/web/js/rem.js"></script>
+    <title>注册</title>
+</head>
+<style>
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+    body {
+        background: url("/static/web/image/zhuce_beijing.png") no-repeat center center/100% 100%;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%;
+        position: relative;
+        width: 100%;
+    }
+
+    div img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .zhuce_logo {
+        width: 1.94rem;
+        height: 1.10rem;
+        margin: 0 auto;
+        margin-top: .96rem;
+        background: url("/static/web/image/zhuce_logo.png") no-repeat center center/100% 100%;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%;
+    }
+
+    .name {
+        width: 100%;
+        margin: 0 auto;
+        font-size: .3rem;
+        margin-top: .22rem;
+        color: #ffffff;
+        text-align: center;
+        box-sizing: border-box;
+        padding-right: .1rem;
+    }
+
+    .tel,
+    .tel1,
+    .yanzhen,
+    .yaoqing,
+    .money {
+        width: 5.40rem;
+        height: .8rem;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: .42rem;
+        border: .02rem solid #5f6cbe;
+        border-radius: .34rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: .3rem;
+        position: relative;
+    }
+
+    .wangji{
+        width: 5.40rem;
+        height: 20px;
+        display: block;
+        margin: 0 auto;
+        text-align: right;
+        color: rgba(255,255,255,0.2);
+    }
+
+    .money {
+        margin-bottom: .2rem;
+    }
+
+    #submit,
+    #submit2 {
+        display: block;
+        width: 5.40rem;
+        height: .8rem;
+        box-sizing: border-box;
+        border: none;
+        margin: 0 auto;
+        text-align: center;
+        line-height: .8rem;
+        margin-top: .42rem;
+        background: #2a7fff;
+        border-radius: .34rem;
+        font-size: .24rem;
+        color: #fff;
+    }
+    .zhuce{
+        display: block;
+        width: 5.40rem;
+        height: .8rem;
+        box-sizing: border-box;
+        border: .02rem solid #5f6cbe;
+        /*border: none;*/
+        margin: 0 auto;
+        text-align: center;
+        line-height: .8rem;
+        margin-top: .42rem;
+        /*background: #2a7fff;*/
+        border-radius: .34rem;
+        font-size: .24rem;
+        color: #fff;
+    }
+
+    .tel_ico {
+        width: .19rem;
+        height: .29rem;
+        margin-left: .4rem;
+        margin-right: .2rem;
+    }
+
+    .yanzhengma {
+        width: .29rem;
+        height: .33rem;
+        margin-left: .4rem;
+        margin-right: .2rem;
+    }
+
+    .yaoqingma {
+        width: .31rem;
+        height: .31rem;
+        margin-left: .4rem;
+        margin-right: .2rem;
+    }
+
+    .yaoqingma img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .yanzhengma img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tel_ico img {
+        width: 100%;
+        height: 100%;
+    }
+
+    input {
+        background: none;
+        outline: none;
+        border: 0px;
+    }
+
+    .tel input,.tel1 input,
+    .money input {
+        width: 80%;
+        height: 70%;
+        background: none;
+        border: none;
+        font-size: .24rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .yzm,
+    .yaoqing input {
+        width: 40%;
+        height: 70%;
+        background: none;
+        border: none;
+        font-size: .24rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    input:focus {
+        border: none;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .yanzhen_btn {
+        /*width: 1.2rem;*/
+        height: .4rem;
+        padding: 0 .15rem;
+        background: #257cff;
+        border-radius: .05rem;
+        text-align: center;
+        line-height: .4rem;
+        position: absolute;
+        right: .38rem;
+        font-size: .18rem;
+        color: #fff;
+    }
+    button{
+        outline:none;
+    }
+    button:focus {outline:none;} /*for IE*/
+    button::-moz-focus-inner {border-color: transparent;} /*for mozilla*/
+
+</style>
+<body>
+    <div class="zhuce_logo"></div>
+    <div class="name">
+        <p>注册嗡嗡加油</p>
+    </div>
+    <div class="tel" style="margin-bottom: .2rem">
+        <div class="tel_ico">
+            <img src="/static/web/image/shouji.png" alt="">
+        </div>
+        <input type="number" class="sjh" placeholder="手机号">
+    </div>
+    <!--验证码-->
+    <div class="yanzhen">
+        <div class="yanzhengma">
+            <img src="/static/web/image/yanzhengma.png" alt="">
+        </div>
+        <input type="text" class="yzm" placeholder="输入验证码">
+        <input type="button" class="yanzhen_btn" value=" 获取验证码">  
+    </div>
+    <!--密码-->
+    <div class="tel1" style="margin-top:.2rem">
+        <div class="yanzhengma">
+            <img src="/static/web/image/yanzhengma2.png" alt="">
+        </div>
+        <input type="password" class="mm" placeholder="密码">
+    </div>
+    <!--邀请码-->
+    <div class="yaoqing">
+        <div class="yaoqingma">
+            <img src="/static/web/image/yaoqingma.png" alt="">
+        </div>
+        <input class="user-yqm" type="number" placeholder="输入邀请码有奖励哦~">
+    </div>
+    <!--注册-->
+    <button id="submit2" value="注 册">注 册</button>
+   
+</body>
+<script src="/static/web/js/jquery-3.1.1.min.js"></script>
+<script src="/static/web/js/md5.js"></script>
+<script src="/static/web/js/rem2.js"></script>
+<script>
+//注册验证码
+		$(".yanzhen_btn").click(function() {
+			if($(".sjh").val() == '' || $(".sjh").val() == undefined){
+				alert("手机号不能为空！")
+			}else{
+				var myreg = /^1[3456789]\d{9}$/;
+				if(!myreg.test($(".sjh").val())) {
+					alert("请输入正确手机号")
+				} else{
+					var obj = getsign();
+					obj.mobile = $(".sjh").val();
+					obj.type = 1;
+					obj.code_token = "d8bb7f35d3c107f0f87ce31ac066ff59";
+					console.log(obj);
+					$.ajax({
+					url: "/mobile/user/sendcode",
+					async: false,
+					type: "post",
+					dataType: "json",
+					data: obj,
+					success: function(data) {
+						console.log(data);
+						settime();
+						
+					},
+					error: function() {
+	
+					}
+				});
+				}
+			}
+			
+		});
+		
+	//验证码倒计时		
+	var countdown=60;  
+    var _generate_code = $(".yanzhen_btn");  
+    function settime() {  
+      if (countdown == 0) {  
+        _generate_code.attr("disabled",false);  
+        _generate_code.val("获取验证码");  
+        countdown = 60;  
+        return false;  
+      } else {  
+        $(".yanzhen_btn").attr("disabled", true);  
+        _generate_code.val("重新发送(" + countdown + ")");  
+        countdown--;  
+      }  
+      setTimeout(function() {  
+        settime();  
+      },1000);  
+    }  
+		
+		//设置cooke
+		function setCookie(name,value,day){
+		    var date = new Date();
+		    date.setDate(date.getDate() + day);
+		    document.cookie = name + '=' + value + ';expires='+ date;
+		  };
+		  //获取cookie
+		  function getCookie(name){
+		    var reg = RegExp(name+'=([^;]+)');
+		    var arr = document.cookie.match(reg);
+		    if(arr){
+		      return arr[1];
+		    }else{
+		      return '';
+		    }
+		  };
+		
+		  //删除cookie
+		  function delCookie(name){
+		    setCookie(name,null,-1);
+		  };
+		//注册
+		$("#submit2").click(function() {
+			//验证是否为空
+			if($(".sjh").val() == '' || $(".sjh").val() == undefined) {
+				alert("手机号不能为空")
+			} else if($(".yzm").val() == '' || $(".yzm").val() == undefined) {
+				alert("验证码不能为空");
+			} else if($(".mm").val() == '' || $(".mm").val() == undefined) {
+				alert("密码不能为空");
+			} else {
+				var myreg = /^1[3456789]\d{9}$/;
+				if(!myreg.test($(".sjh").val())) {
+					alert("请输入正确手机号")
+				} else {
+					var obj = getsign();
+					obj.mobile = $(".sjh").val();
+					obj.code = $('.yzm').val();
+					obj.password = hex_md5($(".mm").val());
+					obj.vip_cide = $(".yqm").val();
+					console.log(obj);
+					$.ajax({
+						url: "/mobile/user/register",
+						async: false,
+						type: "get",
+						dataType: "json",
+						data: obj,
+						success: function(data) {
+							console.log(data);
+							if(data.code == "1111") {
+								alert("注册成功");
+								var obj = getsign();
+								obj.mobile=$(".sjh").val();
+								obj.password=hex_md5($(".mm").val());
+								console.log(obj);
+								$.ajax({
+									url: "/mobile/user/login",
+									async:false,
+									type: "get",
+									dataType: "json",
+									data:obj,
+									success:function(res){
+										if(res.code=="1111"){
+											console.log($(".sjh").val());
+											console.log(hex_md5($(".mm").val()));
+											setCookie('user',$(".sjh").val(),7); //保存帐号到cookie，有效期7天
+										    setCookie('pswd',hex_md5($(".mm").val()),7); //保存密码到cookie，有效期7天
+										    setCookie('zhuce',"1111",1);
+										    window.location.href='index.html';
+										}else{
+											alert(res.message)
+										};
+									}
+								})
+							
+								 
+							}else if(data.code == "2222"){
+								 alert("已经注册，请直接登陆！")
+								 window.location.href='index.html';
+								 
+							}
+
+						},
+						error: function() {
+
+						}
+					});
+
+				}
+			}
+
+		})
+</script>
+</html>
